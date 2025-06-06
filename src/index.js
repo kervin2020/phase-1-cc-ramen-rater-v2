@@ -63,7 +63,7 @@ const handleClick = (ramen) => {
   document.addEventListener('DOMContentLoaded', main);
   
   // Export functions for testing
-  export {
+  module.exports = {
     displayRamens,
     addSubmitListener,
     handleClick,
