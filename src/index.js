@@ -60,7 +60,10 @@ const handleClick = (ramen) => {
     addSubmitListener(form);
   };
   
-  document.addEventListener('DOMContentLoaded', main);
+  // Only add event listener if we're in a browser environment
+  if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', main);
+  }
   
   // Export functions for testing
   module.exports = {
