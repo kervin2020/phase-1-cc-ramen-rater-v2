@@ -15,9 +15,7 @@ const handleClick = (ramen) => {
     detailsComment.textContent = ramen.comment;
   };
   
-  const addSubmitListener = () => {
-    const form = document.getElementById('new-ramen');
-    
+  const addSubmitListener = (form) => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       
@@ -58,7 +56,8 @@ const handleClick = (ramen) => {
   
   const main = () => {
     displayRamens();
-    addSubmitListener();
+    const form = document.getElementById('new-ramen');
+    addSubmitListener(form);
   };
   
   document.addEventListener('DOMContentLoaded', main);
